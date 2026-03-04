@@ -1,0 +1,18 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Login from './Login';
+import Welcome from './Welcome';
+
+const App = () => {
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<Login />} />
+                <Route path="/welcome" element={<Welcome />} />
+                <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
+        </Router>
+    );
+};
+
+export default App;
